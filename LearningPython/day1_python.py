@@ -37,6 +37,3 @@ else:
     print("You are a bad tipper!")
 
 
-
-
-
