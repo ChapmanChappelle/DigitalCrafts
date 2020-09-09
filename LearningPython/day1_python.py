@@ -37,6 +37,6 @@ else:
     print("You are a bad tipper!")
 
 
-test = TESTING TESTING
+
 
 
