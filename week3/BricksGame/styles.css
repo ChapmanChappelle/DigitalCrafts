@@ -1,0 +1,102 @@
+.window {
+    position: absolute;
+    width: 800px;
+    height: 500px;
+    background-color:rgb(202, 202, 202);
+}
+
+.scoreText {
+    position: relative;
+    top: 15%;
+    right: 25%;
+    color: white;
+    font-size: 15px;
+    text-align: right;
+    vertical-align: middle;
+    margin: auto;
+
+}
+.score {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    background-color: black;
+    width: 100%;
+    height: 5%;
+    
+    
+    padding: 0px;
+}
+
+.game {
+    position: relative;
+    margin: 0 auto;
+    top: 5%;
+    background-color: black;
+    width: 95%;
+    height: 85%;
+}
+
+.player {
+    position: relative;
+    width: 15%;
+    height: 3%;
+    background-color:rgb(202, 202, 202);
+    margin: 0 auto;
+    top: 45%;
+}
+
+.ball {
+    position: relative;
+    width: 10px;
+    height: 10px;
+    background-color: white;
+}
+
+.ball.right {
+    top: 1%;
+    left: 85%;
+}
+
+.ball.left {
+    top: 1%;
+    right: 0%;
+}
+
+.ball.bottom {
+    top: 5%;
+    left: 9%;
+}
+
+.blocks {
+    position: relative;
+    display: inline-block;
+    top: 15px;
+    left: 25px;
+    width: 7%;
+    height: 5%;
+    border: 1px solid white;
+}
+
+.blocks.blue {
+    background-color: blue;
+}
+
+.blocks.red {
+    background-color: red;
+}
+
+.blocks.yellow {
+    background-color: yellow;
+}
+
+.blocks.green {
+    background-color: green;
+}
+
+.blocks.blank {
+    border: 1px solid black;
+}
+
+
+
