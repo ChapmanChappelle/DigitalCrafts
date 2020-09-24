@@ -1,0 +1,44 @@
+
+
+#menu {
+    display: flex; 
+    background-color: black; 
+    color: white; 
+}
+
+#menu div {
+    margin: 10px; 
+}
+
+.featured-image-desktop {
+    width: 100%; 
+}
+
+.featured-image-mobile {
+    width: 100%; 
+    display: none;
+}
+
+
+@media (min-width: 320px) and (max-width: 480px) {
+    #menu {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .featured-image-desktop {
+        display: none; 
+    }
+
+    .featured-image-mobile {
+        display: block;
+    }
+}
+
+@media (min-width: 800px) {
+  
+    body {
+        background-color: purple; 
+    }
+    
+}
