@@ -1,0 +1,13 @@
+
+
+#menu {
+    flex-direction: row;
+}
+
+.promo-mobile-art {
+    display:none; 
+}
+
+.promo-desktop-art {
+    display:block; 
+}

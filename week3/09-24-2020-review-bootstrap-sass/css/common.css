@@ -1,0 +1,29 @@
+
+
+#container {
+    display: flex; 
+    flex-direction: column;
+}
+
+
+
+#menu label {
+    margin: 5px; 
+}
+
+
+
+#promo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#promo-links{
+    display: flex;
+}
+
+#promo-links a {
+    margin: 10px; 
+}
