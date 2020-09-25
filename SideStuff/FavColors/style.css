@@ -1,0 +1,98 @@
+/* By default Flexbox have flex-direction: row */
+
+/* When FlexBox is row then justify content moves items left/right
+ When FlexBox is column then justify content moves items up/down 
+
+ When FlexBox is row align-items moves up/down 
+ When FlexBox is column align-items movies left-right
+
+*/
+
+/* Smartphones */
+@media (min-width: 320px) and (max-width: 480px) {
+  #container {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 101%;
+    background-color: white;
+    top: -1px;
+    left: -1px;
+  }
+
+  .palette {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    width: 480px;
+    height: 300px;
+  }
+
+  .blank {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 480px;
+    height: 100px;
+  }
+
+  #charcoal {
+    background-color: #264653;
+  }
+
+  #persian-green {
+    background-color: #2a9d8f; 
+  }
+
+  #maize-crayola {
+    background-color: #e9c46a;
+    color: grey;
+  }
+
+  #sandy-brown {
+    background-color: #f4a261;
+  }
+
+  #terra-cotta {
+    background-color: #e76f51;
+  }
+
+  #imperial-red {
+    background-color: #e63946;
+  }
+
+  #honeydew {
+    background-color: #f1faee;
+    color: grey;
+  }
+
+  #powder-blue {
+    background-color: #a8dadc;
+    color: grey;
+  }
+
+  #steel-blue {
+    background-color: #457b9d;
+  }
+
+  #prussian-blue {
+    background-color: #1d3557;
+  }
+
+
+
+
+  
+  
+}
+
+
+
+
+
+
