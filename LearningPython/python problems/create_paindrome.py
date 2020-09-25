@@ -26,22 +26,12 @@ Output explanation: Number of insertions required is 3 i.e. aBCdefgfEdcba.
 
 def create_palindrome_1(word):
     
-    pal = " "
-    word_arr = list(word)
-    arr_length = len(word_arr)
+    word_length = len(word_arr)
 
-    for i in word_arr:
-       
-        if (word_arr[i] != (word_arr[arr_length-i] )):
-            pal += word_arr[i]
-            print(pal)
-        else:
-            print(pal)
-            print(f"Number of insertions required is {i}")
-            break 
-        
 
-        
+    
+
+
 
 
     
