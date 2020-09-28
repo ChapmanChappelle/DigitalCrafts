@@ -47,4 +47,5 @@ console.log(acct2)
 acct2.transfer(50, acct1)
 console.log(acct1)
 console.log(acct2)
+console.log("END OF BANKING ASSIGNMENT")
 
