@@ -66,7 +66,7 @@ function fizzBuzz(num) {
         console.log("Fizz Buzz")
     }
     else {
-        console.log(num + "is not divisible by 3 or 5.")
+        console.log(num + " is not divisible by 3 or 5.")
     }
 
 }
