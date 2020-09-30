@@ -4,7 +4,7 @@ let entreeBtn = document.getElementById("entreeBtn")
 let dessertBtn = document.getElementById("dessertBtn")
 
 //displaying food function
-displayDishes = function (dish) {
+displayDishes = function (course) {
     for (let i = 0; i < dishes.length; i++) {
         let dish = dishes[i]
 
@@ -18,6 +18,7 @@ displayDishes = function (dish) {
     dishesUL.insertAdjacentHTML("afterend", dishItem)
     }
 }
+
 // clearing list function
 emptyList = function () {
         
