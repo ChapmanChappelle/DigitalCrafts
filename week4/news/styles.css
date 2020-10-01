@@ -8,11 +8,7 @@ body {
 
 @media (min-width: 320px) and (max-width: 480px){ 
     #container {
-        display: flex;
-        direction: column;
-        justify-content: center;
-        align-items: center;
-
+        
     }
 
     .imgs {
@@ -23,7 +19,7 @@ body {
     #article {
         margin-bottom: 10%;
         display: column;
-        direction: row;
+        direction: column;
         align-items: center;
         justify-content: center;
         background-color: #6c757d;
@@ -34,14 +30,32 @@ body {
         margin-left: 5%;
         margin-right: 5%;
         margin-bottom: 5%;
+    }
 
-        
+    #source {
+        margin-bottom: 10%;
+        display: column;
+        direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #6c757d;
+        color: white;
+        border-radius: 5%;
+        padding: 2%;
+        margin-top: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
     }
 
     .title {
         align-self: center;
     }
     
+}
+
+@media (min-width: 481) {
+
 }
 
 
