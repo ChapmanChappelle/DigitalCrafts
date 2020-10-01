@@ -20,7 +20,7 @@ let startBtn = document.getElementById("startBtn")
 let timerH1 = document.getElementById("timerH1")
 
 startBtn.addEventListener("click", function () {
-  let time = userTxt.value
+  let time = (userTxt.value)
   let intervalID = window.setInterval(() => {
     time--
     timerH1.innerHTML = time
