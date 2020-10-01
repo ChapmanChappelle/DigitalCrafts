@@ -7,6 +7,9 @@ body {
 
 
 @media (min-width: 320px) and (max-width: 480px){ 
+    #container {
+        
+    }
 
     .imgs {
         width: 100%;
@@ -29,6 +32,21 @@ body {
         margin-bottom: 5%;
     }
 
+    #source {
+        margin-bottom: 10%;
+        display: column;
+        direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #6c757d;
+        color: white;
+        border-radius: 5%;
+        padding: 2%;
+        margin-top: 0;
+        margin-left: 5%;
+        margin-right: 5%;
+        margin-bottom: 5%;
+    }
 
     .title {
         align-self: center;
@@ -36,41 +54,10 @@ body {
     
 }
 
-@media (min-width: 481px) {
+@media (min-width: 481) {
 
-    #container {
-        display: flex;
-        direction: column;
-        align-items: center;
-        width: 100%;
-        height: auto;
-        margin: 0px;
-    }
+}
 
-    .imgs {
-        width: 70%;
-        height: auto;
-    }
-
-    #article {
-        margin-bottom: 10%;
-        margin-top: 0px;
-        margin-left: 0px;
-        margin-right: 0px;
-        display: block;
-        position: relative;
-        left:15%;
-        text-align: center;
-        background-color: #6c757d;
-        color: white;
-        border-radius: 5%;
-        padding: 2%;
-        width: 65%;
-
-
-    }
-
-    
 
 
 

@@ -13,25 +13,46 @@ let checkNull = (item) => {
     return item
   }
 }
+
+let getArticles = (userID) => {
+  if (userID === "All Articles") {
+    return news.articles
+  } else {
+    news.articles.filter(function(item){
+        return item.id == userID
+    })
+  }
+}
+
 // mapping article
-let articleItem = news.articles.map((article) => {
-  // template literals
-  let articleInfo = ` <div id="article">
+let writeArticle = (id) => {
+  let displayArticles = getArticles(id)
+
+  let mapArticles = displayArticles.map((article) => {
+    // template literals
+    let articleInfo = ` <div id="article">
                             <p>${checkNull(article.author)}</p>
                             <b class="title">${checkNull(article.title)}</b>
                             <p>${checkNull(article.description)}</p>
                             <a href="${checkNull(article.url)}">See Article</a>
-                            <br>
                             <img class="imgs" src="${checkNull(
                               article.urlToImage
                             )}"></img>
                             <p>${checkNull(article.publishedAt)}</p>
                         </div>`
-  //return article item
-  return articleInfo
+    //return article item
+    return articleInfo
+  })
+  // write articles
+  articleBox.innerHTML = mapArticles.join("")
+}
+
+searchBtn.addEventListener("click", function () {
+  let input = sourceTxt.value
+  writeArticle(input)
 })
 // writing items to articleBox
-articleBox.innerHTML = articleItem.join("")
+writeArticle("All Articles")
 
 // mapping sources
 let sourcesItem = sources.sources.map((source) => {
@@ -47,14 +68,4 @@ let sourcesItem = sources.sources.map((source) => {
                         </div>`
   // returning source item
   return sourceInfo
-})
-// writing items to sourcesBox
-//sourcesBox.innerHTML = sourcesItem.join("")
-
-
-searchBtn.addEventListener("click", function () {
-
-    let input = sourceTxt.value
-
-    sourcesBox.innerHTML = sourcesItem
 })
