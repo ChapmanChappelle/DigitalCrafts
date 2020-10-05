@@ -19,4 +19,30 @@
         width: 100%;
         height: auto;
     }
+
+    input {
+        font-size: 20px;;
+    }
+
+    button {
+        font-size: 20px;
+    }
+}
+
+@media (min-width: 481px) {
+    #container {
+        justify-content: center;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    img {
+        width: 50%;
+        height: auto;
+    }
+
+    #searchBox {
+        margin: 0 auto;
+    }
 }
