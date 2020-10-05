@@ -24,7 +24,7 @@ searchBtn.addEventListener("click", function () {
   container.innerHTML= " "
   let userInput = searchTxt.value
   console.log(userInput)
-  let link = "http://www.omdbapi.com/?s=" + userInput + "&apikey=8525251b"
+  let link = `http://www.omdbapi.com/?s=${userInput}&apikey=8525251b`
   console.log(link)
   request.open("GET", link)
   request.send()
