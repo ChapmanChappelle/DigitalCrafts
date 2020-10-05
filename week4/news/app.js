@@ -51,10 +51,8 @@ let sourcesItem = sources.sources.map((source) => {
 // writing items to sourcesBox
 //sourcesBox.innerHTML = sourcesItem.join("")
 
-
 searchBtn.addEventListener("click", function () {
+  let input = sourceTxt.value
 
-    let input = sourceTxt.value
-
-    sourcesBox.innerHTML = sourcesItem
+  sourcesBox.innerHTML = sourcesItem
 })
