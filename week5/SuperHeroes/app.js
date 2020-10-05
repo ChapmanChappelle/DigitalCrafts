@@ -21,7 +21,7 @@ request.addEventListener("load", function () {
 
 // grabs the user input to change the xhr link and reload the page
 searchBtn.addEventListener("click", function () {
-  container.innerHTML= " "
+  container.innerHTML = " "
   let userInput = searchTxt.value
   console.log(userInput)
   let link = `http://www.omdbapi.com/?s=${userInput}&apikey=8525251b`
