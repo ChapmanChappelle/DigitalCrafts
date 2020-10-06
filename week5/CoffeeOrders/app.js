@@ -74,6 +74,7 @@ deleteBtn.addEventListener("click", () => {
 
    // delete @ link and sendrequest
    xhr.open("DELETE", link)
+   displayOrders()
    xhr.send()
    console.log(`${link} Deleted`)
 })
@@ -103,6 +104,7 @@ searchBtn.addEventListener("click", () => {
 
 // put all orders on screen
 displayOrders = function () {
+   ordersDiv.innerHTML = " "
    let xhr = new XMLHttpRequest()
 
    // GETTING ALL ORDERS
