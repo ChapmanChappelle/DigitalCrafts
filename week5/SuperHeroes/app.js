@@ -8,12 +8,12 @@ request.addEventListener("load", function () {
   let result = JSON.parse(this.responseText)
 
   let writeMovies = result.Search.map((movie) => {
-    let factItem = `
+    let movieItem = `
         <p>${movie.Title}</p>
         <p>${movie.Year}</p>
         <img src="${movie.Poster}"></img>
       `
-    return factItem
+    return movieItem
   })
 
   container.insertAdjacentHTML("beforeend", writeMovies.join(""))
