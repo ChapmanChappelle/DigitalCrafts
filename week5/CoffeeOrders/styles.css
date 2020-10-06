@@ -5,6 +5,7 @@
        flex-direction: column;
        align-items: center;
    }
+
    #container {
      display: flex;
      flex-direction: column;
@@ -15,30 +16,139 @@
      font-family: 'Times New Roman', Times, serif;
    }
 
+   #inputDiv {
+       display: flex;
+       flex-direction: row;
+   }
+
+   #orderBtn {
+       margin: 0 auto;
+       display: flex;
+       height: 72px;
+       width: 40%;
+       right: 0px;
+       justify-content: center;
+       align-items: center;
+   }
+
+   #deleteDiv {
+       display: flex;
+   }
+
+   #deleteBtn {
+       right: 0px;
+       width: 40%;
+   }
+
+   #searchDiv {
+       display: flex;
+   }
+
+   #searchBtn {
+       right: 0px;
+       width: 40%;
+   }
+
+   .input {
+       display: flex;
+       position: relative;
+       height: 30px;
+   }
+
    img {
        width: 100%;
        height: auto;
    }
 
    input {
-       font-size: 20px;;
+       font-size: 20px;
+       height: 30px;
    }
 
    button {
        font-size: 20px;
+       
    }
 }
 
 @media (min-width: 481px) {
-   #container {
-       justify-content: center;
-       align-items: center;
-       display: flex;
-       flex-direction: column;
-   }
+  
+    body {
+        background-color: black;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+ 
+    #container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      width: 100%;
+      color: white;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+    }
+ 
+    #inputDiv {
+        align-self: center;
+        display: flex;
+        flex-direction: row;
+    }
+ 
+    #orderBtn {
+        display: flex;
+        height: 72px;
+        width: 40%;
+        right: 0px;
+        justify-content: center;
+        align-items: center;
+    }
+ 
+    #deleteDiv {
+        align-self: center;
+        display: flex;
+    }
+ 
+    #deleteBtn {
+        right: 0px;
+        width: 40%;
+    }
+ 
+    #searchDiv {
+        align-self: center;
+        display: flex;
+    }
+ 
+    #searchBtn {
+        right: 0px;
+        width: 40%;
+    }
+ 
+    .input {
+        display: flex;
+        position: relative;
+        height: 30px;
+    }
+ 
+    img {
+        width: 100%;
+        height: auto;
+    }
+ 
+    input {
+        font-size: 20px;
+        height: 30px;
+    }
+ 
+    button {
+        font-size: 20px;
+        
+    }
 
-   img {
-       width: 50%;
-       height: auto;
-   }
+
+
+
+
+
 }

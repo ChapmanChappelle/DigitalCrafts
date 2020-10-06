@@ -1,8 +1,4 @@
-// POST https://dc-coffeerun.herokuapp.com/api/coffeeorders/
-// emailAddress: String
-// coffee: String
-// GET https://dc-coffeerun.herokuapp.com/api/coffeeorders/
-
+// linking html elements
 let ordersDiv = document.getElementById("ordersDiv")
 let emailTxt = document.getElementById("emailTxt")
 let coffeeTxt = document.getElementById("coffeeTxt")
@@ -15,10 +11,8 @@ let searchEmailTxt = document.getElementById("searchEmailTxt")
 // method for loading all orders (used to write new orders)
 function loadAllOrders() {
    let xhr = new XMLHttpRequest()
-
    // GETTING ALL ORDERS
    xhr.open("GET", "https://dc-coffeerun.herokuapp.com/api/coffeeorders/")
-
    // activates when xhr GET happens
    xhr.onload = function () {
       // turning string into object using parse
@@ -33,20 +27,16 @@ function loadAllOrders() {
 orderBtn.addEventListener("click", () => {
    let emailAddress = emailTxt.value
    let coffee = coffeeTxt.value
-
    //making object out of text boxes
    let xhrObject = {
       emailAddress: emailAddress,
       coffee: coffee,
    }
-
    // logging object and string version of the object
    console.log(xhrObject)
    console.log(JSON.stringify(xhrObject))
-
    // new request
    let xhr = new XMLHttpRequest()
-
    // function for pushing to the API
    xhr.onload = function () {
       let result = JSON.parse(this.responseText)
@@ -60,7 +50,10 @@ orderBtn.addEventListener("click", () => {
    xhr.setRequestHeader("Content-Type", "application/json")
    // push request
    xhr.send(JSON.stringify(xhrObject))
-   displayOrders()
+   // refresh list
+   xhr.onreadystatechange = function () {
+      displayOrders()
+   }
 })
 
 // delete button
@@ -68,15 +61,16 @@ deleteBtn.addEventListener("click", () => {
    // taking user input
    let emailAddress = deleteEmailTxt.value
    let link = `https://dc-coffeerun.herokuapp.com/api/coffeeorders/${emailAddress}`
-
    // start request
    let xhr = new XMLHttpRequest()
-
    // delete @ link and sendrequest
    xhr.open("DELETE", link)
-   displayOrders()
    xhr.send()
    console.log(`${link} Deleted`)
+   // refreshes list
+   xhr.onreadystatechange = function () {
+      displayOrders()
+   }
 })
 
 // search button
@@ -84,14 +78,15 @@ searchBtn.addEventListener("click", () => {
    // take user input
    let emailAddress = searchEmailTxt.value
    let link = `https://dc-coffeerun.herokuapp.com/api/coffeeorders/${emailAddress}`
-
    // start request
    let xhr = new XMLHttpRequest()
    xhr.open("GET", link)
+   // showing info
    xhr.onload = function () {
       // turning JSON string into object
       let order = JSON.parse(this.responseText)
       orderArr = Object.keys(order)
+      // loop through, showing details on screen
       for (i in order) {
          ordersDiv.innerHTML = " "
          ordersDiv.insertAdjacentHTML("afterend", `${i} : ${order[i]} <br>`)
@@ -106,10 +101,8 @@ searchBtn.addEventListener("click", () => {
 displayOrders = function () {
    ordersDiv.innerHTML = " "
    let xhr = new XMLHttpRequest()
-
    // GETTING ALL ORDERS
    xhr.open("GET", "https://dc-coffeerun.herokuapp.com/api/coffeeorders/")
-
    // activates when xhr GET happens
    xhr.onload = function () {
       // turning string into object using parse
