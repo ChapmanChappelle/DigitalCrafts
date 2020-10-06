@@ -91,16 +91,11 @@ searchBtn.addEventListener("click", () => {
       // turning JSON string into object
       let order = JSON.parse(this.responseText)
       orderArr = Object.keys(order)
-      for(i in order) {
+      for (i in order) {
          ordersDiv.innerHTML = " "
-         ordersDiv.insertAdjacentHTML('afterend' , (`${i} : ${order[i]} <br>`))
+         ordersDiv.insertAdjacentHTML("afterend", `${i} : ${order[i]} <br>`)
          console.log(`${i} : ${order[i]}`)
       }
-
-     /*  orderArr.forEach(function () {
-         ordersDiv.innerText = orderArr.join("\n") 
-      }) */
-      console.log(order)
    }
    // send request
    xhr.send()
@@ -125,4 +120,5 @@ displayOrders = function () {
    // push request
    xhr.send()
 }
+// start with all the orders on the screen
 displayOrders()
