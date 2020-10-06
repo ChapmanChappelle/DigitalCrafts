@@ -78,7 +78,7 @@
 @media (min-width: 481px) {
   
     body {
-        background-color: black;
+        background-color:#264653;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -86,9 +86,12 @@
  
     #container {
       display: flex;
+      margin: 0 auto;
       flex-direction: column;
       position: relative;
-      width: 100%;
+      top: 0px;
+      width: 50%;
+      height: 800px;
       color: white;
       text-align: center;
       font-family: 'Times New Roman', Times, serif;
@@ -98,12 +101,14 @@
         align-self: center;
         display: flex;
         flex-direction: row;
+        width: 100%;
+        margin: 0 auto;
     }
  
     #orderBtn {
         display: flex;
         height: 72px;
-        width: 40%;
+        width: 100%;
         right: 0px;
         justify-content: center;
         align-items: center;
@@ -112,21 +117,23 @@
     #deleteDiv {
         align-self: center;
         display: flex;
+        width: 100%;
     }
  
     #deleteBtn {
         right: 0px;
-        width: 40%;
+        width: 100%;
     }
  
     #searchDiv {
         align-self: center;
         display: flex;
+        width: 100%;
     }
  
     #searchBtn {
         right: 0px;
-        width: 40%;
+        width: 100%;
     }
  
     .input {
@@ -149,10 +156,12 @@
         font-size: 20px;
         
     }
+}
 
-
-
-
-
+ @media (min-width: 481px) and (max-width: 709px) {
+     
+    #deleteEmailTxt {
+        height: 45.5px;
+    }
 
 }
