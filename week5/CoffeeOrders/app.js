@@ -84,8 +84,7 @@ searchBtn.addEventListener("click", () => {
    // showing info
    xhr.onload = function () {
       // turning JSON string into object
-      let order = JSON.parse(this.responseText)
-      orderArr = Object.keys(order)
+      let order = JSON.parse(this.responseText) 
       // loop through, showing details on screen
       for (i in order) {
          ordersDiv.innerHTML = " "
