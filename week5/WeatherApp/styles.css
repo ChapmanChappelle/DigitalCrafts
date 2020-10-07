@@ -39,18 +39,7 @@
        right: 0px;
        width: 60%;
    }
-
-   .input {
-       display: flex;
-       position: relative;
-       height: 30px;
-   }
-
-   img {
-       width: 100%;
-       height: auto;
-   }
-
+   
    input {
        font-size: 20px;
        height: 30px;
