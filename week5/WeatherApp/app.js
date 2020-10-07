@@ -7,7 +7,7 @@ let locationBtn = document.getElementById("locationBtn")
 searchBtn.addEventListener("click", function () {
    let city = searchTxt.value
    fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city},us&appid=d650535edf33536ba7a9691a5847bde7&units=imperial`
+      `http://api.openweathermap.org/data/2.5/weather?q=${city},us&appid=ENTERAPIKEY&units=imperial`
    )
       .then(function (response) {
          return response.json()
@@ -26,7 +26,7 @@ locationBtn.addEventListener("click", function () {
       let lat = position.coords.latitude
       let lon = position.coords.longitude
       fetch(
-         `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=d650535edf33536ba7a9691a5847bde7&units=imperial`
+         `http://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=ENTERAPIKEY&units=imperial`
       )
          .then(function (response) {
             return response.json()
