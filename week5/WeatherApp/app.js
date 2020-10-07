@@ -40,7 +40,7 @@ locationBtn.addEventListener("click", function () {
    })
 })
 
-// function for turning into HTML
+// function for turning json into HTML
 function writeWeather(data) {
    let weatherItem = `<div id="weatherItemDiv">
                         <b>Weather Info for ${data.name}</b>
