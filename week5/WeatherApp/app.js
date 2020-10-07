@@ -3,6 +3,7 @@ let searchTxt = document.getElementById("searchTxt")
 let weatherDiv = document.getElementById("weatherDiv")
 let locationBtn = document.getElementById("locationBtn")
 
+// listener that takes user input for city
 searchBtn.addEventListener("click", function () {
    let city = searchTxt.value
    fetch(
@@ -13,13 +14,13 @@ searchBtn.addEventListener("click", function () {
       })
       .then(function (data) {
          writeWeather(data)
-         console.log(data)
       })
       .catch(function (err) {
          console.log("error: " + err)
       })
 })
 
+// listener that takes the user's location, which calls the write weather function
 locationBtn.addEventListener("click", function () {
    navigator.geolocation.getCurrentPosition(function (position) {
       let lat = position.coords.latitude
@@ -32,7 +33,6 @@ locationBtn.addEventListener("click", function () {
          })
          .then(function (data) {
             writeWeather(data)
-            console.log(data)
          })
          .catch(function (err) {
             console.log("error: " + err)
