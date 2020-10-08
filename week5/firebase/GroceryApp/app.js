@@ -2,6 +2,9 @@ let groceryDiv = document.getElementById("groceryDiv")
 let addDiv = document.getElementById("addDiv")
 let storeBtn = document.getElementById("storeBtn")
 let storeTxt = document.getElementById("storeTxt")
+let addItemDiv = document.getElementById("addItemDiv")
+let itemTxt = document.getElementById("itemTxt")
+let itemBtn = document.getElementById("itemBtn")
 
 // listener for storeBtn
 storeBtn.addEventListener("click", () => {
@@ -9,20 +12,28 @@ storeBtn.addEventListener("click", () => {
    saveDataToFirebase(name)
 })
 
+// function for adding items to a grocery store
+function addItems(documentId) {
+   // gets item name
+   let userInput = itemTxt.value
+
+   db.collection("stores")
+      .doc(documentId)
+      .update({
+         items: firebase.firestore.FieldValue.arrayUnion(`${userInput}`),
+      })
+}
+
 // takes documentID and deletes the store from the database
 function deleteStore(documentId) {
    db.collection("stores")
       .doc(documentId)
       .delete()
       .then(function () {
-         getAll()
+         getAllStores()
       })
       .catch(function (error) {})
-   
-   // refreshing list
-   getAllStores()
 }
-
 // displays all stores
 function getAllStores() {
    // clear groceryDiv
@@ -34,8 +45,11 @@ function getAllStores() {
          snapshot.forEach((doc) => {
             let data = doc.data()
             let storeItem = `
-               <p>${data.name}</p>
-               <button onclick="deleteStore('${doc.id}')">Delete</button>`
+               <div id="storeItem">
+                  <p>${data.name}</p>
+                  <button id="deleteBtn" onclick="deleteStore('${doc.id}')">Delete</button>
+                  <button id="addItemsBtn" onclick="addItems('${doc.id}')">Add Item</button>
+               </div>`
             groceryDiv.insertAdjacentHTML("beforeend", storeItem)
          })
       })
@@ -45,7 +59,7 @@ function getAllStores() {
 function saveDataToFirebase(name) {
    db.collection("stores")
       .add({
-         name: name
+         name: name,
       })
       .then(function (docRef) {
          getAllStores()
@@ -54,8 +68,5 @@ function saveDataToFirebase(name) {
          console.log("error")
       })
 }
-
-
-
 
 getAllStores()

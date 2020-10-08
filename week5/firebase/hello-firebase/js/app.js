@@ -4,6 +4,12 @@ let movieNameTextField = document.getElementById("movieNameTextField")
 let movieYearTextField = document.getElementById("movieYearTextField")
 let addMovieButton = document.getElementById("addMovieButton")
 
+let addActorsToMovieButton = document.getElementById("addActorsToMovieButton")
+
+addActorsToMovieButton.addEventListener("click", function () {
+   addActorsToMovie("kSeydz9uB0PPUP8zphko")
+})
+
 addMovieButton.addEventListener("click", () => {
    let name = movieNameTextField.value
    let year = movieYearTextField.value
@@ -30,6 +36,14 @@ function saveDataToFirebase(name, year) {
       })
 }
 
+function addActorsToMovie(movieId) {
+   let actorsArray = ["Actor1 Batman", "Actor2 Batman", "Actors3 Batman"]
+
+   db.collection("movies").doc(movieId).update({
+      actors: actorsArray,
+   })
+}
+
 function deleteMovie(documentId) {
    // delete the movie based on the documentId
    db.collection("movies")
@@ -51,10 +65,19 @@ function getAllMovies() {
       .then((snapshot) => {
          snapshot.forEach((doc) => {
             let data = doc.data()
+            console.log(data)
+
+            let actorsItem = data.actors.map((actor) => {
+               return `<div>${actor}</div>`
+            })
+
             let movieItem = `<li>
             <label>${data.name} - ${data.year}</label>
             <button onclick="deleteMovie('${doc.id}')">Delete</button>
-            </li>`
+            </li>
+            ${actorsItem.join("")}
+            `
+
             moviesList.insertAdjacentHTML("beforeend", movieItem)
          })
       })

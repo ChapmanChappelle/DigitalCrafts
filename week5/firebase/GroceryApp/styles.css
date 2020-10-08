@@ -1,0 +1,80 @@
+@media (min-width: 320px) and (max-width: 480px) {
+   body {
+       background-color: black;
+       display: flex;
+       flex-direction: column;
+       font-size: 20px;
+   }
+   #container {
+     display: flex;
+     flex-direction: column;
+     position: relative;
+     width: 100%;
+     color: white;
+     text-align: center;
+     font-family: 'Times New Roman', Times, serif;
+     font-size: 20px;
+   }
+
+   img {
+       width: 100%;
+       height: auto;
+   }
+
+   input {
+       font-size: 20px;;
+   }
+
+   button {
+       font-size: 20px;
+   }
+}
+
+@media (min-width: 481px) {
+   #container {
+       display: flex;
+       flex-direction: row;
+       font-size: 20px;
+       width: 30%;
+   }
+
+   #storeItem {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+
+   }
+
+   #addDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   #addItemDiv {
+      display: none;
+      flex-direction: row;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
+   }
+
+   #groceryDiv {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      width: 100%;
+   }
+
+   img {
+      width: 50%;
+      height: auto;
+   }
+
+   button { 
+      margin-left: 20px;
+      height: 30px;
+   }
+}

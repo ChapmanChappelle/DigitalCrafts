@@ -45,8 +45,4 @@
         height: auto;
     }
 
-    #ordersDiv {
-        display: flex;
-        flex-direction: column;
-    }
 }
