@@ -1,0 +1,38 @@
+<html>
+    <body>
+
+        <h2>Add User</h2>
+        <input type="text" id="nameTextBox" />
+        <input type="text" id="ageTextBox" />
+        <button id="addUserButton">Add User</button>
+
+        <div id="userList" />
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/6.3.1/firebase-database.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#config-web-app -->
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyDB6hPm3tGd5R1BNQQn24KDcNFQ7tuidoc",
+    authDomain: "groceryapp-30a4d.firebaseapp.com",
+    databaseURL: "https://groceryapp-30a4d.firebaseio.com",
+    projectId: "groceryapp-30a4d",
+    storageBucket: "",
+    messagingSenderId: "343565691441",
+    appId: "1:343565691441:web:98d85fb6daa7e62c"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  // create an object of firebase database 
+  var database = firebase.database() 
+</script>
+    <script src="user.js"></script>
+    <script src="hobby.js"></script>
+    <script src="app.js"></script>
+    </body>
+</html>
