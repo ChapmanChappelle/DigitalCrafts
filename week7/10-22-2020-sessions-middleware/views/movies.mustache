@@ -1,0 +1,31 @@
+
+<html>
+
+<body>
+
+
+    <!-- Filter Drop Down List -->
+<form method="POST" action="/movies/search">
+<select name="genre">
+  <option value="">Select a genre</option>
+  <option value="action">Action</option>
+  <option value="kids">Kids</option>
+</select>
+<button>Search</button>
+</form>
+
+
+    <ul>
+    {{#movies}} 
+
+        <li>
+        <label> {{name}} </label>
+        <a href="/movies/{{movieId}}"><button>Details</button></a>
+        </li>
+
+    {{/movies}}
+    </ul>
+
+</body>
+
+</html>
