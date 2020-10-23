@@ -11,15 +11,18 @@ app.engine("mustache", mustacheExpress())
 app.set("views", "./views")
 //setting up view engine
 app.set('view engine', 'mustache');
+app.set('views', __dirname + '/views');
 // for parsing form submitted data
 app.use(express.urlencoded())
+// to use js for client side
+app.use(express.static("js"))
+// to use styling
+app.use(express.static("css"))
 
 // pages and stuff
 app.get("/page",(req,res) => {
    res.render("page")
 })
-
-
 
 // run page
 app.listen(PORT,() => {
