@@ -6,12 +6,12 @@ const app = express()
 const mustacheExpress = require("mustache-express")
 const PORT = 3000
 // setting up Express to use Mustache Express as template pages
-app.engine("mustache", mustacheExpress())
+app.engine("mustache", mustacheExpress(VIEWS_PATH + "/partials", ".mustache"))
 // the pages are located in views directory
 app.set("views", "./views")
 //setting up view engine
 app.set('view engine', 'mustache');
-app.set('views', __dirname + '/views');
+const VIEWS_PATH = path.join(__dirname,"/views")
 // for parsing form submitted data
 app.use(express.urlencoded())
 // to use js for client side
