@@ -1,0 +1,30 @@
+
+<h1>Blog</h1>
+
+<form method="POST" action="/create-post">
+ <input type="text" placeholder="Title" name="title" />
+ <br>
+ <textarea placeholder="Body" name="body"> </textarea>
+ <button>Save</button>
+</form>
+
+
+
+<ul>
+{{#blog_posts}}
+
+    <li>
+    <form method="POST" action="/delete-post">
+        <label>{{title}}</label>
+        <label>{{date_created}}</label>
+        <button>Delete</button>
+        <br>
+        <label>{{body}}</label>
+        <input type="hidden" value={{post_id}} name="post_id" />
+       
+     </form>
+    </li>
+
+
+{{/blog_posts}}
+</ul>

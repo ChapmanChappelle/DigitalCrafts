@@ -1,4 +1,3 @@
-// NPM INSTALL NODE
 // NPM INSTALL NODEMON
 // NPM INSTALL MUSTACHE-EXPRESS
 const express = require("express")
