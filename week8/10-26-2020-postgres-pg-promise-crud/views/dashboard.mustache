@@ -1,0 +1,18 @@
+
+<ul>
+{{#usersAddresses}}
+    <li>
+        <p>{{firstName}} {{lastName}} </p>
+        <p>{{street}} {{city}} </p>
+
+        {{#addresses}}
+        <li>
+            {{street}} - {{city}}
+            </li>
+        {{/addresses}}
+
+    </li>
+
+{{/usersAddresses}}
+</ul>
+
