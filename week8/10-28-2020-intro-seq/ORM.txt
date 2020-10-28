@@ -1,0 +1,21 @@
+
+ORM 
+
+Classes 
+     
+User                        User.findAll((users) => { console.log(users)})
+ - userId 
+ - firstName 
+ - lastName 
+
+
+
+
+
+
+Relational Database 
+
+Users (Table)
+
+user_id    first_name     last_name 
+1           John           Doe 
