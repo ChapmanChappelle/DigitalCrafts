@@ -1,6 +1,4 @@
 /* HEADER */
-#container {
-}
 #headerDiv {
   display: flex;
   flex-direction: row;
@@ -69,6 +67,7 @@
 .bar {
   background-color: darkorange;
   height: 10%;
+  width: 110;
   margin: 0px;
   display: flex;
   align-items: center;
