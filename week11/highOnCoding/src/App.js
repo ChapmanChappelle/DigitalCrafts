@@ -1,19 +1,25 @@
-// using React from react framework 
-import React, { Component } from 'react'
-
+// using React from react framework
+import React, { Component } from "react"
 
 class App extends Component {
-
-  // render function dictates that what the component 
-  // will display on the screen 
-  render() {
-    return (
-      <div>
-        <h1>Hello World 2</h1> 
-      </div>
-    )
-  }
-
+   render() {
+      return (
+         <div id="container">
+            // header
+            <div id="headerDiv">
+               <Header />
+            </div>
+            // content
+            <div id="contentDiv">
+               <Content />
+            </div>
+            // articles
+            <div id="articleDiv">
+               <Articles />
+            </div>
+         </div>
+      )
+   }
 }
 
 export default App
