@@ -1,23 +1,21 @@
-// using React from react framework 
-import React, { Component } from 'react'
-import Name from './Name'
-
+// using React from react framework
+import React, { Component } from "react"
+import Name from "./Name"
+import Friends from "./Friends"
+import './App.css';
 
 class App extends Component {
-
-  // render function dictates that what the component 
-  // will display on the screen 
-  render() {
-    return (
-      <div>
-        <h1>Hello World 2</h1> 
-        <h1>Another Line</h1>
-        <Name name = "Mary" lastName = "Doe" />
-        <Name name = "Alex" lastName = "Doe2" />
-      </div>
-    )
-  }
-
+   render() {
+      return (
+         <div id="container">
+            <h1>Activity 1</h1>
+            <Name name="Mary" lastName="Doe" />
+            <Name name="Alex" lastName="Last Name" />
+            <h1>Activity 2</h1>
+            <Friends />
+         </div>
+      )
+   }
 }
 
 export default App
