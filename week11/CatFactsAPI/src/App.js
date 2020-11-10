@@ -41,10 +41,6 @@ class App extends Component {
             })
          })
    }
-
-   componentDidMount() {
-     /*  this.fetchFacts() */
-   }
 }
 
 export default App
