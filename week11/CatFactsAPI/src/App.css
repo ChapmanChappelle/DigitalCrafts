@@ -5,12 +5,17 @@
   position: absolute;
   width: 33.33%;
   height: 500px;
-  background-color: bisque;
   left: 33.33%;
+  background-color: skyblue;
   top: 15%;
 }
 
 #factsDiv {
   display: flex;
   flex-direction: column;
+}
+
+#fact {
+  margin-left: 10px;
+  margin-right: 10px;
 }
