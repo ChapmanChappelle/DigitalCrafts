@@ -1,35 +1,49 @@
 import React, { Component } from "react"
+import Facts from "./Facts"
+import "./App.css"
 
 class App extends Component {
    constructor() {
       super()
 
       this.state = {
-        facts: []
+         facts: [],
       }
    }
 
    render() {
-     const factItems = this.state.facts.map(fact => {
-       return <li>
-         <p>{fact.text}</p>
-       </li>
-     })
+      return (
+         <div id="container">
+            <div id="buttonDiv">
+               <button id="factBtn" onClick={this.showFact}>
+                  press for a cat fact!
+               </button>
+            </div>
+            <div id="factsDiv">
+               <Facts facts={this.state.facts} />
+            </div>
+         </div>
+      )
+   }
 
-     return <ul>{factItems}</ul>
+   showFact = () => {
+      this.fetchFacts()
+   }
 
+   fetchFacts() {
+      fetch(
+         "https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=1"
+      )
+         .then((response) => response.json())
+         .then((result) => {
+            this.setState({
+               facts: result,
+            })
+         })
    }
 
    componentDidMount() {
-      fetch(
-         "https://cat-fact.herokuapp.com/facts/random?animal_type=cat&amount=4"
-      )
-         .then((response) => response.json())
-         .then((result) =>  {
-           this.setState({
-             facts: result
-           })
-         })
+     /*  this.fetchFacts() */
    }
 }
 
