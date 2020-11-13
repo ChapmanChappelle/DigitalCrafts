@@ -1,25 +1,20 @@
-
-import React, { useState, useEffect } from 'react'
-import DisplayCounter from './Components/DisplayCounter'
-import IncrementCounter from './Components/IncrementCounter'
-
-
+import React, { useState, useEffect } from "react"
+import DisplayCounter from "./Components/DisplayCounter"
+import IncrementCounter from "./Components/IncrementCounter"
 
 function App() {
+   const [count, setCount] = useState(0)
 
-  const [count, setCount] = useState(0)
+   const handleIncrement = (count) => {
+      setCount(count)
+   }
 
-  const handleIncrement = (count) => {
-    setCount(count)
-  }
-
-  return (
-    <div>
-      <IncrementCounter onIncrement = {handleIncrement} />
-      <DisplayCounter counter = {count} />
-    </div>
-  )
-
+   return (
+      <div>
+         <IncrementCounter onIncrement={handleIncrement} />
+         <DisplayCounter counter={count} />
+      </div>
+   )
 }
 
-export default App;
+export default App
